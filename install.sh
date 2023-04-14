@@ -1035,8 +1035,7 @@ menu() {
 
     echo -e "—————————————— 安装向导 ——————————————"""
     echo -e "${Green}0.${Font}  升级 脚本"
-    echo -e "${Green}1.${Font}  安装 V2Ray (Nginx+ws+tls)"
-    echo -e "${Green}19.${Font} 安装 V2Ray(Nginx+ws+tls)+Warp(代理模式)"
+    echo -e "${Green}1.${Font}  安装 V2Ray (Nginx+ws+tls)+Warp"
     echo -e "${Green}2.${Font}  安装 V2Ray (http/2)"
     echo -e "${Green}3.${Font}  升级 V2Ray core"
     echo -e "—————————————— 配置变更 ——————————————"
@@ -1064,8 +1063,8 @@ menu() {
         ;;
     1)
         shell_mode="ws"
-        install_v2ray_ws_tls
         install_cf_warp
+        install_v2ray_ws_tls
         ;;
     2)
         shell_mode="h2"
