@@ -23,10 +23,6 @@
         "wsSettings": {
           "path": "/e01ec5ea/"
         }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
       }
     }
   ], 
@@ -36,19 +32,6 @@
       "settings": { }, 
       "tag": "direct"
     }, 
-    {
-      "tag": "warp",
-      "protocol": "socks",
-      "settings": {
-          "servers": [
-              {
-                  "address": "127.0.0.1",
-                  "port": 40000, 
-                  "users": []
-              }
-          ]
-      }
-    },
     {
       "protocol": "blackhole", 
       "settings": { }, 
@@ -68,15 +51,6 @@
   "routing": {
     "domainStrategy": "AsIs",
     "rules": [
-      {
-        "type": "field",
-        "domain": [
-            "openai.com",
-            "ai.com",
-            "geosite:netflix"
-        ],
-        "outboundTag": "warp"
-      },
       {
         "type": "field",
         "inboundTag": [
